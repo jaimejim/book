@@ -14,7 +14,7 @@ deploy:
   skip-cleanup: true
   # Generate token at https://github.com/settings/tokens
   # Encrypt adn add to travis with `travis encrypt yourtokengoeshere -add deploy.api_key`
-  github_token: "$GITHUB_TOKEN"
+  github-token: "$GITHUB_TOKEN"
   local-dir: "./book"
   keep-history: true
   on:
