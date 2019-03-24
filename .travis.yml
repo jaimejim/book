@@ -14,7 +14,8 @@ deploy:
   skip-cleanup: true
   # How to generate the token
   # travis encrypt "GITHUB_TOKEN" --add deploy.api_key
-  #github-token: "$GITHUB_TOKEN" 
+  # Create environment variable on https://travis-ci.org/jaimejim/book/settings
+  github-token: "$GITHUB_TOKEN" 
   local-dir: "./book"
   keep-history: true
   on:
