@@ -278,32 +278,36 @@ the file pattern <code>*_test.go</code>. These additional files can contain test
 <a class="header" href="#working-with-repos" id="working-with-repos"><h2>Working with repos</h2></a>
 <p><strong><code>git clone &lt;url.git&gt;</code></strong> clone an exsisting repository into a new directory.</p>
 <p><code>git init</code> create an empty Git repository or reinitialize an existing one.</p>
-<a class="header" href="#staging" id="staging"><h2>Staging`</h2></a>
+<a class="header" href="#staging" id="staging"><h2>Staging`</h2></a>
 <p><code>git status</code> shows modified files in working directory, staged for your next commit</p>
 <p><strong><code>git add [file]</code></strong> add a file as it looks now to your next commit (stage).</p>
 <p><code>git reset [file]</code> unstage a file while retaining the changes in working directory.</p>
 <p><code>git diff</code> diff of what is changed but not staged.</p>
 <p><code>git diff --staged</code> diff of what is staged but not yet committed.</p>
 <p><strong><code>git commit -m “[descriptive message]”</code></strong> commit your staged content as a new commit snapshot.</p>
-<p>#### Branch &amp; Merge</p>
+<p>## Branch &amp; Merge</p>
 <p><code>git branch</code> list your branches. a * will appear next to the currently active branch.</p>
 <p><strong><code>git branch [branch-name]</code></strong> create a new branch at the current commit.</p>
 <p><code>git checkout</code> switch to another branch and check it out into your working directory.</p>
 <p><strong><code>git merge [branch]</code></strong> merge the specified branch’s history into the current one.</p>
 <p><code>git log</code> show all commits in the current branch’s history.</p>
-<p>#### Share and Update</p>
+<p>## Share and Update</p>
 <p><code>git remote add [alias] [url]</code> add a git URL as an alias.</p>
 <p><code>git fetch [alias]</code> fetch down all the branches from that Git remote.</p>
 <p><code>git merge [alias]/[branch]</code> merge a remote branch into your current branch to bring it up to date.</p>
 <p><strong><code>git push [alias] [branch]</code></strong> transmit local branch commits to the remote repository branch.</p>
 <p><strong><code>git pull</code></strong> fetch and merge any commits from the tracking remote branch.</p>
-<a class="header" href="#rewrite-history" id="rewrite-history"><h4>Rewrite History</h4></a>
+<a class="header" href="#rewrite-history" id="rewrite-history"><h2>Rewrite History</h2></a>
 <p><code>git rebase [branch]</code> apply any commits of current branch ahead of specified one.</p>
 <p><code>git reset --hard [commit]</code> clear staging area, rewrite working tree from specified commit.</p>
-<a class="header" href="#temporary-commits" id="temporary-commits"><h4>Temporary Commits</h4></a>
+<a class="header" href="#temporary-commits" id="temporary-commits"><h2>Temporary Commits</h2></a>
 <p><strong><code>git stash</code></strong> save modified and staged changes.</p>
 <p><code>git stash list</code> list stack-order of stashed file changes</p>
 <p><code>git stash drop</code> discard  the changes from top of stash stack.</p>
+<a class="header" href="#useful-aliases" id="useful-aliases"><h2>Useful Aliases</h2></a>
+<p><strong><code>alias gs='git status'</code></strong> this one is used a lot.</p>
+<p><code>alias gcb='git rev-parse --abbrev-ref HEAD | pbcopy'</code> copy the current branch name.</p>
+<p><strong><code>tig</code></strong> for tracking changes on your terminal.</p>
 
                     </main>
 
