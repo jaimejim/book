@@ -160,4 +160,3 @@ the file pattern `*_test.go`. These additional files can contain test functions,
     FAIL archive/zip   0.022s
     ok   compress/gzip 0.033s
 ```
-

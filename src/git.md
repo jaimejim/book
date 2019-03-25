@@ -2,13 +2,13 @@
 
 Started to do version control on linux when they were told to pay. Linus created `git`. Github and gitlab are the most popular. It is used for social coding.`
 
-#### Working with repos
+## Working with repos
 
 **`git clone <url.git>`** clone an exsisting repository into a new directory.
 
 `git init` create an empty Git repository or reinitialize an existing one.
 
-#### Staging
+## Staging`
 
 `git status` shows modified files in working directory, staged for your next commit
 
