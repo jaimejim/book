@@ -8,7 +8,7 @@ Started to do version control on linux when they were told to pay. Linus created
 
 `git init` create an empty Git repository or reinitialize an existing one.
 
-## Staging`
+## Staging`
 
 `git status` shows modified files in working directory, staged for your next commit
 
@@ -22,7 +22,7 @@ Started to do version control on linux when they were told to pay. Linus created
 
 **`git commit -m “[descriptive message]”`** commit your staged content as a new commit snapshot.
 
-#### Branch & Merge
+## Branch & Merge
 
 `git branch` list your branches. a * will appear next to the currently active branch.
 
@@ -34,7 +34,7 @@ Started to do version control on linux when they were told to pay. Linus created
 
 `git log` show all commits in the current branch’s history.
 
-#### Share and Update
+## Share and Update
 
 `git remote add [alias] [url]` add a git URL as an alias.
 
@@ -46,16 +46,24 @@ Started to do version control on linux when they were told to pay. Linus created
 
 **`git pull`** fetch and merge any commits from the tracking remote branch.
 
-#### Rewrite History
+## Rewrite History
 
 `git rebase [branch]` apply any commits of current branch ahead of specified one.
 
 `git reset --hard [commit]` clear staging area, rewrite working tree from specified commit.
 
-#### Temporary Commits
+## Temporary Commits
 
 **`git stash`** save modified and staged changes.
 
 `git stash list` list stack-order of stashed file changes
 
 `git stash drop` discard  the changes from top of stash stack.
+
+## Useful Aliases
+
+**`alias gs='git status'`** this one is used a lot.
+
+`alias gcb='git rev-parse --abbrev-ref HEAD | pbcopy'` copy the current branch name.
+
+**`tig`** for tracking changes on your terminal.
