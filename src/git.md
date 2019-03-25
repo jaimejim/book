@@ -8,7 +8,7 @@ Started to do version control on linux when they were told to pay. Linus created
 
 `git init` create an empty Git repository or reinitialize an existing one.
 
-## Staging`
+## Staging
 
 `git status` shows modified files in working directory, staged for your next commit
 
