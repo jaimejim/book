@@ -20,9 +20,9 @@ Started to do version control on linux when they were told to pay. Linus created
 
 `git diff --staged` diff of what is staged but not yet committed.
 
-**`git commit -m [descriptive message]`** commit your staged content as a new commit snapshot.
+**`git commit -m "[descriptive message]"`** commit your staged content as a new commit snapshot.
 
-## Branch & Merge
+## Branch Merge
 
 `git branch` list your branches. a * will appear next to the currently active branch.
 
