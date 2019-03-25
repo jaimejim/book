@@ -15,7 +15,7 @@ deploy:
   # Generate token at https://github.com/settings/tokens
   # Go to travis and copy it to /repo/settings environment variable, name it "GITHUB-TOKEN"
   github-token: "$GITHUB_TOKEN"
-  local-dir: "./notebook"
+  local-dir: "./book"
   keep-history: true
   on:
     branch: master
