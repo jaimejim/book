@@ -34,7 +34,7 @@ Started to do version control on linux when they were told to pay. Linus created
 
 `git log` show all commits in the current branch’s history.
 
-## Share and Update
+## Share and Update
 
 `git remote add [alias] [url]` add a git URL as an alias.
 
