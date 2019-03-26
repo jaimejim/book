@@ -1,5 +1,5 @@
 # Summary
 
 - [Introduction](./introduction.md)
-- [Go](./go.md)
-- [Git](./git.md)
+- [Go Udemy Course](./go.md)
+- [Git Commands](./git.md)
