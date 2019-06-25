@@ -4,6 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Notes to the reader</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +60,7 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
@@ -75,7 +79,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="go.html"><strong aria-hidden="true">2.</strong> Go Udemy Course</a></li><li><a href="git.html"><strong aria-hidden="true">3.</strong> Git Commands</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="go.html"><strong aria-hidden="true">2.</strong> Go Udemy Course</a></li><li><a href="git.html"><strong aria-hidden="true">3.</strong> Git Commands</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -105,7 +112,7 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Notes to the reader</h1> 
+                        <h1 class="menu-title">Notes to the reader</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -140,11 +147,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#introduction" id="introduction"><h1>Introduction</h1></a>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
 <p>This is a Notebook on various different topics that I have been interested in at some point.</p>
-<a class="header" href="#notes-on-go" id="notes-on-go"><h1>Notes on Go</h1></a>
+<h1><a class="header" href="#notes-on-go" id="notes-on-go">Notes on Go</a></h1>
 <p>Here are some notes about the udemy go course</p>
-<a class="header" href="#introduction-1" id="introduction-1"><h2>Introduction</h2></a>
+<h2><a class="header" href="#introduction-1" id="introduction-1">Introduction</a></h2>
 <p>Go was created by the same guys that helped do C, Unix, and UTF8; Robert Griesemer, Rob Pike and Ken Thompson.</p>
 <p>The reason was that Google did not find a language that met their needs.</p>
 <p>Purpose was to have it takes advantage of multiple cores, and parallel computing.</p>
@@ -178,7 +185,7 @@
 <li>garbage colected</li>
 <li>it is portable</li>
 <li>open source</li>
-<li>efficient concurrency
+<li>efficient concurrency 
 <ul>
 <li>perl, ruby, js, python very bad</li>
 <li>c, c++, java as good as Go</li>
@@ -206,18 +213,18 @@
 </code></pre>
 <pre><code class="language-md">Drop by drop, the bucket gets filled
 </code></pre>
-<a class="header" href="#overview" id="overview"><h2>Overview</h2></a>
+<h2><a class="header" href="#overview" id="overview">Overview</a></h2>
 <p>Check pinned bookmarks On Firefox. Documentation is also there.</p>
 <p>Development can be done in <a href="https://play.golang.org/">https://play.golang.org/</a> too.</p>
 <p>Visual Studio seems to be the best for now, but IntelliJ has a &quot;pro&quot; Golang IDE that could be set.</p>
-<a class="header" href="#go-workspace" id="go-workspace"><h3>Go Workspace</h3></a>
+<h3><a class="header" href="#go-workspace" id="go-workspace">Go Workspace</a></h3>
 <p>Go has a convention for folder structureswith three directories:</p>
 <pre><code class="language-md">.
 ├── bin    (holds compiled commands)
 ├── pkg    (holds installed package objects)
 └── src    (holds the source code. Can hold github repositories)
 </code></pre>
-<a class="header" href="#environment-variables" id="environment-variables"><h3>Environment variables</h3></a>
+<h3><a class="header" href="#environment-variables" id="environment-variables">Environment variables</a></h3>
 <p><code>$ go env</code> has the following output.</p>
 <pre><code class="language-bash">GOARCH=&quot;amd64&quot;
 GOBIN=&quot;&quot;
@@ -246,7 +253,7 @@ CGO_LDFLAGS=&quot;-g -O2&quot;
 PKG_CONFIG=&quot;pkg-config&quot;
 GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/fd/cg4t07ld0gd2dnqxyp048lk40000gn/T/go-build612109292=/tmp/go-build -gno-record-gcc-switches -fno-common&quot;
 </code></pre>
-<a class="header" href="#choosing-the-right-ide" id="choosing-the-right-ide"><h3>Choosing the right IDE</h3></a>
+<h3><a class="header" href="#choosing-the-right-ide" id="choosing-the-right-ide">Choosing the right IDE</a></h3>
 <p>I use VS Code, works well, but there are many other options:</p>
 <ul>
 <li><em>VS Code</em></li>
@@ -255,7 +262,7 @@ GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -
 <li>Sublime</li>
 <li>Vim</li>
 </ul>
-<a class="header" href="#basic-commands-in-go" id="basic-commands-in-go"><h3>Basic Commands in Go</h3></a>
+<h3><a class="header" href="#basic-commands-in-go" id="basic-commands-in-go">Basic Commands in Go</a></h3>
 <p><code>go version</code> current version of go (e.g. <code>go version go1.12.1 darwin/amd64</code>)</p>
 <p><code>go fmt ./...</code> formats the code. It prints the names of the files that are modified. On VS the code is formatted with every save.</p>
 <p><code>go help</code> to see list of topics.</p>
@@ -273,38 +280,38 @@ the file pattern <code>*_test.go</code>. These additional files can contain test
     FAIL archive/zip   0.022s
     ok   compress/gzip 0.033s
 </code></pre>
-<a class="header" href="#github-general-usage-notes" id="github-general-usage-notes"><h1>Github general usage notes</h1></a>
+<h1><a class="header" href="#github-general-usage-notes" id="github-general-usage-notes">Github general usage notes</a></h1>
 <p>Started to do version control on linux when they were told to pay. Linus created <code>git</code>. Github and gitlab are the most popular. It is used for social coding.</p>
-<a class="header" href="#working-with-repos" id="working-with-repos"><h2>Working with repos</h2></a>
+<h2><a class="header" href="#working-with-repos" id="working-with-repos">Working with repos</a></h2>
 <p><strong><code>git clone &lt;url.git&gt;</code></strong> clone an exsisting repository into a new directory.</p>
 <p><code>git init</code> create an empty Git repository or reinitialize an existing one.</p>
-<a class="header" href="#staging" id="staging"><h2>Staging</h2></a>
+<h2><a class="header" href="#staging" id="staging">Staging</a></h2>
 <p><code>git status</code> shows modified files in working directory, staged for your next commit</p>
 <p><strong><code>git add [file]</code></strong> add a file as it looks now to your next commit (stage).</p>
 <p><code>git reset [file]</code> unstage a file while retaining the changes in working directory.</p>
 <p><code>git diff</code> diff of what is changed but not staged.</p>
 <p><code>git diff --staged</code> diff of what is staged but not yet committed.</p>
 <p><strong><code>git commit -m &quot;[descriptive message]&quot;</code></strong> commit your staged content as a new commit snapshot.</p>
-<a class="header" href="#branch-merge" id="branch-merge"><h2>Branch Merge</h2></a>
+<h2><a class="header" href="#branch-merge" id="branch-merge">Branch Merge</a></h2>
 <p><code>git branch</code> list your branches. am <code>*</code> will appear next to the currently active branch.</p>
 <p><strong><code>git branch [branch-name]</code></strong> create a new branch at the current commit.</p>
 <p><code>git checkout</code> switch to another branch and check it out into your working directory.</p>
 <p><strong><code>git merge [branch]</code></strong> merge the specified branch’s history into the current one.</p>
 <p><code>git log</code> show all commits in the current branch’s history.</p>
-<a class="header" href="#share-and-update" id="share-and-update"><h2>Share and Update</h2></a>
+<h2><a class="header" href="#share-and-update" id="share-and-update">Share and Update</a></h2>
 <p><code>git remote add [alias] [url]</code> add a git URL as an alias.</p>
 <p><code>git fetch [alias]</code> fetch down all the branches from that Git remote.</p>
 <p><code>git merge [alias]/[branch]</code> merge a remote branch into your current branch to bring it up to date.</p>
 <p><strong><code>git push [alias] [branch]</code></strong> transmit local branch commits to the remote repository branch.</p>
 <p><strong><code>git pull</code></strong> fetch and merge any commits from the tracking remote branch.</p>
-<a class="header" href="#rewrite-history" id="rewrite-history"><h2>Rewrite History</h2></a>
+<h2><a class="header" href="#rewrite-history" id="rewrite-history">Rewrite History</a></h2>
 <p><code>git rebase [branch]</code> apply any commits of current branch ahead of specified one.</p>
 <p><code>git reset --hard [commit]</code> clear staging area, rewrite working tree from specified commit.</p>
-<a class="header" href="#temporary-commits" id="temporary-commits"><h2>Temporary Commits</h2></a>
+<h2><a class="header" href="#temporary-commits" id="temporary-commits">Temporary Commits</a></h2>
 <p><strong><code>git stash</code></strong> save modified and staged changes.</p>
 <p><code>git stash list</code> list stack-order of stashed file changes</p>
 <p><code>git stash drop</code> discard  the changes from top of stash stack.</p>
-<a class="header" href="#useful-aliases" id="useful-aliases"><h2>Useful Aliases</h2></a>
+<h2><a class="header" href="#useful-aliases" id="useful-aliases">Useful Aliases</a></h2>
 <p><strong><code>alias gs='git status'</code></strong> this one is used a lot.</p>
 <p><code>alias gcb='git rev-parse --abbrev-ref HEAD | pbcopy'</code> copy the current branch name.</p>
 <p><strong><code>tig</code></strong> for tracking changes on your terminal.</p>
