@@ -16,9 +16,6 @@ function playpen_text(playpen) {
 }
 
 (function codeSnippets() {
-    // Hide Rust code lines prepended with a specific character
-    var hiding_character = "#";
-
     function fetch_with_timeout(url, options, timeout = 6000) {
         return Promise.race([
             fetch(url, options),
@@ -296,7 +293,7 @@ function playpen_text(playpen) {
         themeToggleButton.focus();
     }
 
-    function set_theme(theme) {
+    function set_theme(theme, store = true) {
         let ace_theme;
 
         if (theme == 'coal' || theme == 'navy') {
@@ -331,9 +328,10 @@ function playpen_text(playpen) {
         try { previousTheme = localStorage.getItem('mdbook-theme'); } catch (e) { }
         if (previousTheme === null || previousTheme === undefined) { previousTheme = default_theme; }
 
-        try { localStorage.setItem('mdbook-theme', theme); } catch (e) { }
+        if (store) {
+            try { localStorage.setItem('mdbook-theme', theme); } catch (e) { }
+        }
 
-        document.body.className = theme;
         html.classList.remove(previousTheme);
         html.classList.add(theme);
     }
@@ -343,7 +341,7 @@ function playpen_text(playpen) {
     try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
     if (theme === null || theme === undefined) { theme = default_theme; }
 
-    set_theme(theme);
+    set_theme(theme, false);
 
     themeToggleButton.addEventListener('click', function () {
         if (themePopup.style.display === 'block') {
@@ -365,7 +363,7 @@ function playpen_text(playpen) {
         }
     });
 
-    // Should not be needed, but it works around an issue on macOS & iOS: https://github.com/rust-lang-nursery/mdBook/issues/628
+    // Should not be needed, but it works around an issue on macOS & iOS: https://github.com/rust-lang/mdBook/issues/628
     document.addEventListener('click', function(e) {
         if (themePopup.style.display === 'block' && !themeToggleButton.contains(e.target) && !themePopup.contains(e.target)) {
             hideThemes();
